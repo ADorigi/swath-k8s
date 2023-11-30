@@ -1,0 +1,1 @@
+# k8s manifest files for [Swath](https://github.com/ADorigi/Swath)
