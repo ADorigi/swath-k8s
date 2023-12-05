@@ -14,7 +14,7 @@ spec:
     namespace: swath
 
   syncPolicy:
-    synvOptions:
+    syncOptions:
     - CreateNamespace=true
 
     automated: 
