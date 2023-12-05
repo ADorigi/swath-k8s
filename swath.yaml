@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: swath
 
-  syncPolcy:
+  syncPolicy:
     synvOptions:
     - CreateNamespace=true
 
