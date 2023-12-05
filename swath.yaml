@@ -4,7 +4,7 @@ metadata:
   name: swath 
   namespace: argocd
 spec:
-  project: swath
+  project: default
   source:
     repoURL: https://github.com/ADorigi/swath-k8s.git
     targetRevision: HEAD
