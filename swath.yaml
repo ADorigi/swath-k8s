@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: swath 
+  namespace: argocd
+spec:
+  project: swath
+  source:
+    repoURL: https://github.com/ADorigi/swath-k8s.git
+    targetRevision: HEAD
+    path: swath-k8s-for-argocd
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: swath
+
+  syncPolcy:
+    synvOptions:
+    - CreateNamespace=true
+
+    automated: 
+      selfHeal: true
+      prune: true
