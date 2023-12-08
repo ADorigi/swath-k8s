@@ -21,18 +21,18 @@ spec:
             name: swath-lb
             port:
               number: 80
-        pathType: Prefix
-      - path: "/zerotwozero"
-        backend:
-          service:
-            name: swath-lbzerotwozero
-            port:
-              number: 80
-        pathType: Prefix
-      - path: "/015"
-        backend:
-          service:
-            name: swath-lb015
-            port:
-              number: 80
-        pathType: Prefix
+        pathType: Fixed 
+      # - path: "/zerotwozero"
+      #   backend:
+      #     service:
+      #       name: swath-lbzerotwozero
+      #       port:
+      #         number: 80
+      #   pathType: Prefix
+      # - path: "/015"
+      #   backend:
+      #     service:
+      #       name: swath-lb015
+      #       port:
+      #         number: 80
+      #   pathType: Prefix
