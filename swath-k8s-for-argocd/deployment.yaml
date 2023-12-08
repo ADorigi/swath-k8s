@@ -1,3 +1,4 @@
+# Deployment of the latest version
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,5 +17,54 @@ spec:
         app: swath
     spec:
       containers:
-      - image: northamerica-northeast2-docker.pkg.dev/agile-tangent-401105/container-registry/swath:0.2.0
+      - image: northamerica-northeast2-docker.pkg.dev/agile-tangent-401105/container-registry/swath:latest
         name: swath
+
+---
+
+# Deployment for version 0.2.0
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: swath020
+  name: swath020
+  namespace: swath
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swath020
+  template:
+    metadata:
+      labels:
+        app: swath020
+    spec:
+      containers:
+      - image: northamerica-northeast2-docker.pkg.dev/agile-tangent-401105/container-registry/swath:0.2.0
+        name: swath020
+
+---
+
+# Deployment for version 0.1.5
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: swath015
+  name: swath015
+  namespace: swath
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: swath015
+  template:
+    metadata:
+      labels:
+        app: swath015
+    spec:
+      containers:
+      - image: northamerica-northeast2-docker.pkg.dev/agile-tangent-401105/container-registry/swath:0.1.5
+        name: swath015
+

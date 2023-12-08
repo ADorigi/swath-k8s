@@ -22,3 +22,17 @@ spec:
             port:
               number: 80
         pathType: Prefix
+      - path: "/020"
+        backend:
+          service:
+            name: swath-lb020
+            port:
+              number: 80
+        pathType: Exact
+      - path: "/015"
+        backend:
+          service:
+            name: swath-lb015
+            port:
+              number: 80
+        pathType: Exact
