@@ -27,22 +27,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: swath020
-  name: swath020
+    app: swathzerotwozero
+  name: swathzerotwozero
   namespace: swath
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: swath020
+      app: swathzerotwozero
   template:
     metadata:
       labels:
-        app: swath020
+        app: swathzerotwozero
     spec:
       containers:
       - image: northamerica-northeast2-docker.pkg.dev/agile-tangent-401105/container-registry/swath:0.2.0
-        name: swath020
+        name: swathzerotwozero
 
 ---
 

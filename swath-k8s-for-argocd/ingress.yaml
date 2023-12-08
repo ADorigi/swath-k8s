@@ -25,7 +25,7 @@ spec:
       - path: "/zerotwozero"
         backend:
           service:
-            name: swath-lb020
+            name: swath-lbzerotwozero
             port:
               number: 80
         pathType: Prefix

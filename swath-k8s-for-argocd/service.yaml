@@ -20,19 +20,19 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: swath-lb-020
+  name: swath-lb-zerotwozero
   namespace: swath
 spec:
   type: NodePort
   selector:
-    app: swath020
+    app: swathzerotwozero
   ports:
     - name: 80-9009 
       protocol: TCP
       port: 80
       targetPort: 9009
   selector:
-    app: swath020
+    app: swathzerotwozero
 
 
 ---
