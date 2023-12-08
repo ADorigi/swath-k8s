@@ -22,7 +22,7 @@ spec:
             port:
               number: 80
         pathType: Prefix
-      - path: "/v020"
+      - path: "/zerotwozero"
         backend:
           service:
             name: swath-lb020
