@@ -16,21 +16,21 @@ spec:
   - host: swath.gule-gulzar.com
     http:
       paths:
-      - path: "/"
+      - path: /
         backend:
           service:
             name: swath-lb
             port:
               number: 80
         pathType: Prefix
-      - path: "/zerotwozero"
+      - path: /zerotwozero
         backend:
           service:
             name: swath-lb-zerotwozero
             port:
               number: 80
         pathType: Prefix
-      - path: "/015"
+      - path: /015
         backend:
           service:
             name: swath-lb-015
