@@ -26,14 +26,14 @@ spec:
       - path: "/zerotwozero"
         backend:
           service:
-            name: swath-lbzerotwozero
+            name: swath-lb-zerotwozero
             port:
               number: 80
         pathType: Prefix
       - path: "/015"
         backend:
           service:
-            name: swath-lb015
+            name: swath-lb-015
             port:
               number: 80
         pathType: Prefix
