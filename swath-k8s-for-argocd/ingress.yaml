@@ -7,22 +7,26 @@ metadata:
   name: swath-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    # kubernetes.io/ingress.class: "nginx"
     kubernetes.io/ingress.global-static-ip-name: "static-ip-swath"
     networking.gke.io/managed-certificates: managed-certificate
     networking.gke.io/v1beta1.FrontendConfig: redirect-http
 spec:
+  defaultBackend:
+    service:
+      name: swath-lb
+      port:
+        number: 80
   rules:
   - host: swath.gule-gulzar.com
     http:
       paths:
-      - path: /
-        backend:
-          service:
-            name: swath-lb
-            port:
-              number: 80
-        pathType: Prefix
+      # - path: /
+      #   backend:
+      #     service:
+      #       name: swath-lb
+      #       port:
+      #         number: 80
+      #   pathType: Prefix
       - path: /zerotwozero
         backend:
           service:
