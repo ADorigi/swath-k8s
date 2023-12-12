@@ -11,11 +11,11 @@ metadata:
     networking.gke.io/managed-certificates: managed-certificate
     networking.gke.io/v1beta1.FrontendConfig: redirect-http
 spec:
-  defaultBackend:
-    service:
-      name: swath-lb
-      port:
-        number: 80
+  # defaultBackend:
+  #   service:
+  #     name: swath-lb
+  #     port:
+  #       number: 80
   rules:
   - host: swath.gule-gulzar.com
     http:
